@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-image: url(./image/board.jpg);
+      
+    }
+    #container{
+        background-color: rgb(255, 255, 255);
+        width: 20%;
+        padding: 10px;
+        margin: auto;
+        margin-top: 20px;
+    }
+    h1{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        background-color: rgb(170, 214, 235);
+        width: 320px;
+        padding: 10px;
+        border: 5px solid gray;
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 150px;
+  
+    }
+    label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="email"], select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #000000;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: #b8c6cc;
+        }
+        button[type="submit"] {
+            background-color: #530fff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+        }
+       
+
+
+
+
+input[type=button] {
+  background-color: #516668;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+input[type=button]:hover {
+  background-color: #6783ce;
+}
+input[type=text]:hover {
+  background-color: #ffffff;
+}
+
+</style>
+<body>
+    <h1 style="text-align: center;color: rgb(0, 0, 0);margin-top: 150px;"> PERIMETER OF CIRCLE</h1>
+    <div id="container">
+        <label for="text">Radius:</label>
+        <br>
+        <input type="text" id="txtRadius" value="0"/>
+        <br>
+        <br>
+
+        <input type="button" value="Calculate" onclick="calculate()"/>
+        <input type="button" value="Reset" onclick="reset()"/>
+        <br>
+        <br>
+
+        <span id="spnResult">Perimeter of Circle=0</span>
+        <br>
+        <a href="./home.html">Go Back</a>
+    </div>
+    <script type="text/javascript">
+        function calculate()
+        {
+            var r = Number(document.getElementById("txtRadius").value);
+            var perimeterofCircle=2*Math.PI*r;
+            document.getElementById("spnResult").innerHTML="Perimeter of Circle="+perimeterofCircle.toFixed(2);
+        }
+        function reset()
+        {
+            document.getElementById("txtRadius").value=0;
+            document.getElementById("spnResult").innerHTML="Area of Circle=0"
+
+        }
+
+    </script>
+    
+    
+</body>
+</html>

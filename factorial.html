@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    h1{
+        text-align: center;
+        color: white;
+        margin-top: 170px;
+    }
+    body{
+        background-image:url(./image/num.jpg);
+        background-size: 100%;
+    }
+  
+    #container{
+        background-color: rgb(255, 255, 255);
+        width: 20%;
+        padding: 10px;
+        margin: auto;
+        margin-top: 20px;
+    }
+    label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="email"], select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #000000;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: #b8c6cc;
+        }
+        button[type="submit"] {
+            background-color: #530fff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+        }
+       
+
+
+
+
+input[type=button] {
+  background-color: #516668;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+input[type=button]:hover {
+  background-color: #6783ce;
+}
+input[type=text]:hover {
+  background-color: #ffffff;
+}
+
+</style>
+<body>
+    <h1>Let Us Find Factorial</h1>
+    <div id="container">
+        <label for="text">Enter a Number:</label>
+        <br>
+        <input type="text" id="num" placeholder="Enter a Number..."/>
+        <br>
+        
+
+        <button onclick="fact()">Factorial</button>
+        <br>
+        <br>
+
+     
+        <p id="viewOutput"></p>
+        <br>
+        <a href="./home.html">Go Back</a>
+
+    </div>
+    <script>
+        function fact()
+        {
+            var i,num,f;
+            f=1;
+            num=document.getElementById("num").value;
+            for(i = 1;i <= num;i++)
+            {
+                f = f * i;
+            }
+            i = i-1;
+
+          document.getElementById("viewOutput").innerHTML = "The Factorial of Number "+i+" is "+f;
+
+        }
+
+    </script>
+</body>
+</html>
